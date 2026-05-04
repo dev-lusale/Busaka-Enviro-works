@@ -392,3 +392,90 @@ footer {
     background: var(--accent-color);
     color: #000;
 }
+
+/* --- FEEDBACK / TESTIMONIALS STYLES --- */
+.feedback-card {
+    background: var(--glass-bg);
+    padding: 50px 40px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+}
+
+.quote-icon {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #eee;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.client-info {
+    border-top: 1px solid var(--glass-border);
+    padding-top: 20px;
+}
+
+.client-name {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.client-org {
+    display: block;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.feedback-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-color);
+    transform: translateY(-10px);
+}
+
+/* Mobile Adjustment for Feedback */
+@media (max-width: 768px) {
+    .feedback-card {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+}
+
+.icon-gold {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Specific styling to give the maps a 'luxury tech' feel */
+.service-card h3 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 0.85rem;
+    color: #999;
+    line-height: 1.7;
+}
