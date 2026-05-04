@@ -9,6 +9,7 @@
     <!-- Leaflet CSS for the Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,81 +18,160 @@
         <div class="logo">BUSAKA <span>ENVIROWORKS</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#services">Solutions</a></li>
-            <li><a href="#map-section">Geospatial</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#innovation">Innovation</a></li>
             <li><a href="#contact" class="btn-contact">Get in Touch</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Pioneering Industrial Innovation</h1>
-            <p>Expertise in Web, Mobile, Mining Tech, and Geospatial Intelligence.</p>
+            <h1>Sustainable. Data-Driven.</h1>
+            <p>Environmental Intelligence & Infrastructure Support for Zambia and Africa.</p>
             <div class="cta-group">
-                <a href="#services" class="primary-btn">Explore Solutions</a>
+                <a href="#services" class="primary-btn">Explore Our Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="services" style="background: rgba(0,0,0,0.9);">
+        <div class="container">
+            <h2 class="section-title">Company Overview</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: #ccc;">
+                Busaka Enviroworks Limited is a Zambian environmental consultancy delivering data-driven solutions.
+                We integrate GIS, IoT, and AI to enhance environmental decision-making and risk management.
+            </p>
+            <div class="service-card"
+                style="max-width: 600px; margin: 0 auto; text-align: center; border-color: var(--accent-color);">
+                <h3 style="color: var(--accent-color);">Our Vision</h3>
+                <p>"To become a leading environmental intelligence and infrastructure support firm in Zambia and across
+                    Africa."</p>
             </div>
         </div>
     </section>
 
     <section id="services" class="services">
-        <h2 class="section-title">Our Technical Ecosystem</h2>
+        <h2 class="section-title">Our Core Services</h2>
         <div class="services-grid">
+            <!-- Pillar 1 -->
             <div class="service-card">
-                <h3>Web Development</h3>
-                <p>High-performance, scalable web architectures tailored for enterprise needs.</p>
+                <h3 style="color: var(--accent-color);">Environmental Consultancy</h3>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: #bbb;">
+                    <li>• Impact Assessments (EIA)</li>
+                    <li>• Audits & Compliance Monitoring</li>
+                    <li>• Waste Management Planning</li>
+                    <li>• Water Quality Assessment</li>
+                </ul>
             </div>
+            <!-- Pillar 2 -->
             <div class="service-card">
-                <h3>App Development</h3>
-                <p>Native and cross-platform mobile solutions designed for seamless UX.</p>
+                <h3 style="color: var(--accent-color);">Infrastructure & Projects</h3>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: #bbb;">
+                    <li>• Civil Project Management</li>
+                    <li>• Solar Energy Solutions</li>
+                    <li>• Site Beautification</li>
+                    <li>• Pest Control & Fumigation</li>
+                </ul>
             </div>
+            <!-- Pillar 3 -->
             <div class="service-card">
-                <h3>Mining Innovations</h3>
-                <p>Real-time waste management and sensor-based monitoring for modern extraction.</p>
+                <h3 style="color: var(--accent-color);">Digital & Computer Science</h3>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: #bbb;">
+                    <li>• Web & Digital Platforms</li>
+                    <li>• GIS-based Mapping Solutions</li>
+                    <li>• Environmental Data Dashboards</li>
+                    <li>• Custom IoT System Development</li>
+                </ul>
             </div>
-            <div class="service-card">
-                <h3>Geospatial Services</h3>
-                <p>Advanced mapping and spatial data analysis for environmental precision.</p>
+        </div>
+    </section>
+
+    <section id="innovation" class="services"
+        style="background: rgba(10,10,10,0.95); border-top: 1px solid var(--glass-border);">
+        <h2 class="section-title">Innovation & Research</h2>
+        <div class="service-card" style="border-left: 4px solid var(--accent-color);">
+            <h3>Tailings Storage Monitoring</h3>
+            <p>We are currently developing a prototype management system for mining environments. This integrates GIS
+                and AI to enhance real-time risk assessment and operational oversight.</p>
+
+        </div>
+    </section>
+    <section id="visionaries" class="services" style="background: rgba(0,0,0,0.95);">
+        <h2 class="section-title">The Visionaries</h2>
+        <p
+            style="text-align: center; color: var(--accent-color); letter-spacing: 3px; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 50px;">
+            Leadership & Innovation</p>
+
+        <div class="services-grid">
+            <!-- Visionary 1 -->
+            <div class="visionary-card">
+                <div class="image-wrapper">
+                    <img src="images/pic.jpg" alt="Bernard Lusale">
+                </div>
+                <div class="visionary-info">
+                    <h3>Bernard Lusale</h3>
+                    <span class="role">Co-Founder</span>
+                </div>
+            </div>
+
+            <!-- Visionary 2 -->
+            <div class="visionary-card">
+                <div class="image-wrapper">
+                    <img src="images/lwimba.jpeg" alt="Lwimba Mutale">
+                </div>
+                <div class="visionary-info">
+                    <h3>Lwimba Mutale</h3>
+                    <span class="role">Co-Founder</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="map-section" class="map-container">
-        <h2 class="section-title">Global Geospatial Reach</h2>
+        <h2 class="section-title">Geospatial Intelligence</h2>
         <div id="map"></div>
     </section>
+
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-info">
-                <h2>Let's Connect</h2>
-                <p>Reach out to Busaka Enviroworks Limited for bespoke tech and industrial solutions.</p>
+                <h2>Get In Touch</h2>
+                <p>Partner with us to address complex environmental challenges with measurable impact.</p>
+
                 <div class="details">
                     <p><strong>Email:</strong> info@busakaenviro.com</p>
                     <p><strong>Location:</strong> Copperbelt, Zambia</p>
                 </div>
+
+                <!-- Social Media Icons Section -->
+                <div class="social-links">
+                    <a href="https://wa.me/yournumber" target="_blank" class="social-icon"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://linkedin.com/company/busaka" target="_blank" class="social-icon"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com/busaka" target="_blank" class="social-icon"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com/@busaka" target="_blank" class="social-icon"><i
+                            class="fab fa-tiktok"></i></a>
+                </div>
             </div>
 
-            <!-- Replace 'your-formspree-id' with the ID you get from Formspree.io -->
-            <form id="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST" class="glass-form">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Proposal</button>
+            <form id="contact-form" action="https://formspree.io/f/your-id" method="POST" class="glass-form">
+                <div class="form-group"><input type="text" name="name" placeholder="Full Name" required></div>
+                <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
+                <div class="form-group"><textarea name="message" rows="4" placeholder="Your Inquiry"
+                        required></textarea></div>
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
                 <p id="form-status"></p>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Busaka Enviroworks Limited. All Rights Reserved.</p>
+        <p>&copy; 2026 Busaka Enviroworks Limited. | Engineering a Sustainable Future.</p>
     </footer>
 
-    <!-- Leaflet JS for Map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
