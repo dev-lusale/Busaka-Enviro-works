@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busaka Enviroworks Limited | Engineering the Future</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS for the Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">BUSAKA <span>ENVIROWORKS</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Solutions</a></li>
+            <li><a href="#map-section">Geospatial</a></li>
+            <li><a href="#contact" class="btn-contact">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Pioneering Industrial Innovation</h1>
+            <p>Expertise in Web, Mobile, Mining Tech, and Geospatial Intelligence.</p>
+            <div class="cta-group">
+                <a href="#services" class="primary-btn">Explore Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Our Technical Ecosystem</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>High-performance, scalable web architectures tailored for enterprise needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>App Development</h3>
+                <p>Native and cross-platform mobile solutions designed for seamless UX.</p>
+            </div>
+            <div class="service-card">
+                <h3>Mining Innovations</h3>
+                <p>Real-time waste management and sensor-based monitoring for modern extraction.</p>
+            </div>
+            <div class="service-card">
+                <h3>Geospatial Services</h3>
+                <p>Advanced mapping and spatial data analysis for environmental precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="map-section" class="map-container">
+        <h2 class="section-title">Global Geospatial Reach</h2>
+        <div id="map"></div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Connect</h2>
+                <p>Reach out to Busaka Enviroworks Limited for bespoke tech and industrial solutions.</p>
+                <div class="details">
+                    <p><strong>Email:</strong> info@busakaenviro.com</p>
+                    <p><strong>Location:</strong> Copperbelt, Zambia</p>
+                </div>
+            </div>
+
+            <!-- Replace 'your-formspree-id' with the ID you get from Formspree.io -->
+            <form id="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST" class="glass-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Proposal</button>
+                <p id="form-status"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Busaka Enviroworks Limited. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Leaflet JS for Map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
