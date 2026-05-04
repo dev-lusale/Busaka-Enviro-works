@@ -340,3 +340,115 @@ footer {
         gap: 80px;
     }
 }
+
+/* --- MOBILE SPECIFIC STYLES --- */
+@media (max-width: 768px) {
+
+    /* Navbar Adjustment */
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    /* Hamburger Menu Icon */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 6px;
+        z-index: 1001;
+    }
+
+    .bar {
+        width: 25px;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: 0.3s;
+    }
+
+    /* Mobile Menu Overlay */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hidden off-screen */
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        gap: 30px;
+    }
+
+    .nav-links.active {
+        right: 0;
+        /* Slides in */
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+    }
+
+    /* Hamburger Animation to 'X' */
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero Scaling */
+    .hero-content h1 {
+        font-size: 2.5rem;
+        padding: 0 10px;
+    }
+
+    /* Visionaries/Founders Layout */
+    #visionaries .services-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .image-wrapper {
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+
+    /* Contact & Form Scaling */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .contact-info h2 {
+        font-size: 2.2rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .glass-form {
+        padding: 25px;
+    }
+
+    /* Section Spacing */
+    .services,
+    .contact-section,
+    .map-container {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
