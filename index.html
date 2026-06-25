@@ -3,8 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#c5a059">
+    <meta name="description" content="Busaka Enviroworks Limited — Environmental Intelligence & Infrastructure Support for Zambia and Africa.">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Busaka">
+
+    <!-- Open Graph (social sharing) -->
+    <meta property="og:title" content="Busaka Enviroworks Limited">
+    <meta property="og:description" content="Environmental Intelligence & Infrastructure Support for Zambia and Africa.">
+    <meta property="og:image" content="images/busaka.jpg">
+    <meta property="og:type" content="website">
+
     <title>Busaka Enviroworks Limited | Engineering the Future</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/busaka.jpg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -18,7 +33,12 @@
             <img src="images/busaka.jpg" alt="Busaka Enviroworks Logo">
             <span class="logo-name">BUSAKA <span>ENVIROWORKS</span></span>
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#services">Services</a></li>
@@ -213,12 +233,12 @@
                 <div class="social-links">
                     <a href="https://wa.me/yournumber" target="_blank" class="social-icon"><i
                             class="fab fa-whatsapp"></i></a>
-                    <a href="https://linkedin.com/company/busaka" target="_blank" class="social-icon"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://facebook.com/busaka" target="_blank" class="social-icon"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://tiktok.com/@busaka" target="_blank" class="social-icon"><i
-                            class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/company/busaka-enviroworks-limited/" target="_blank"
+                        class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61564754948524" target="_blank"
+                        class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <!--<a href="https://tiktok.com/@busaka" target="_blank" class="social-icon"><i
+                            class="fab fa-tiktok"></i></a>-->
                 </div>
             </div>
 
