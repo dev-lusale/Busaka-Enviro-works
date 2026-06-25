@@ -1,47 +1,51 @@
 // Initialize the map
-const map = L.map('map').setView([-12.8468, 28.2120], 13); // Centered on Kitwe/Copperbelt area by default
+const map = L.map('map').setView([-12.8468, 28.2120], 13);
 
-// Add a professional dark-themed tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Add a custom marker for the headquarters
-const marker = L.marker([-12.8468, 28.2120]).addTo(map)
+L.marker([-12.8468, 28.2120]).addTo(map)
     .bindPopup('Busaka Enviroworks HQ')
     .openPopup();
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        // Close mobile menu on link click
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Hamburger menu toggle
+// Hamburger menu — declared first so scroll listeners can reference it
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+
+function closeMenu() {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+}
 
 hamburger.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
     hamburger.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        closeMenu();
     }
+});
+
+// Smooth scrolling — closes menu on nav link tap
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        closeMenu();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offset = 70; // account for fixed navbar height
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+    });
 });
 
 // Contact form — async submission via Formspree
@@ -52,12 +56,9 @@ const submitBtn = document.getElementById('submit-btn');
 if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-
-        // Loading state
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         formStatus.textContent = '';
-        formStatus.className = '';
 
         try {
             const response = await fetch(contactForm.action, {
@@ -79,7 +80,7 @@ if (contactForm) {
                 formStatus.style.color = '#e05c5c';
             }
         } catch {
-            formStatus.textContent = 'Unable to send message. Please email us at busakaenviroworks@gmail.com.';
+            formStatus.textContent = 'Unable to send. Email us at busakaenviroworks@gmail.com.';
             formStatus.style.color = '#e05c5c';
         } finally {
             submitBtn.disabled = false;
