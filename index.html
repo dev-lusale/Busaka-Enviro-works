@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busaka Enviroworks Limited | Engineering the Future</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Leaflet CSS for the Map -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
     <nav class="navbar">
-        <div class="logo">BUSAKA <span>ENVIROWORKS</span></div>
+        <div class="logo">
+            <img src="images/busaka.jpg" alt="Busaka Enviroworks Logo">
+            <span class="logo-name">BUSAKA <span>ENVIROWORKS</span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#overview">Overview</a></li>
@@ -91,14 +92,12 @@
                 <p>Strategic spatial modeling and land-use intelligence using high-resolution satellite data for
                     environmental compliance.</p>
             </div>
-
             <div class="service-card">
                 <i class="fas fa-cloud-sun-rain icon-gold"></i>
                 <h3>Predictive Risk Mapping</h3>
                 <p>Utilizing machine learning to map environmental risks, from flood zones to mining waste dispersal
                     patterns.</p>
             </div>
-
             <div class="service-card">
                 <i class="fas fa-satellite icon-gold"></i>
                 <h3>Remote Sensing</h3>
@@ -115,15 +114,14 @@
             <h3>Tailings Storage Monitoring</h3>
             <p>We are currently developing a prototype management system for mining environments. This integrates GIS
                 and AI to enhance real-time risk assessment and operational oversight.</p>
-
         </div>
     </section>
+
     <section id="visionaries" class="services" style="background: rgba(0,0,0,0.95);">
         <h2 class="section-title">The Visionaries</h2>
         <p
             style="text-align: center; color: var(--accent-color); letter-spacing: 3px; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 50px;">
             Leadership & Innovation</p>
-
         <div class="services-grid">
             <!-- Visionary 1 -->
             <div class="visionary-card">
@@ -135,7 +133,6 @@
                     <span class="role">Co-Founder</span>
                 </div>
             </div>
-
             <!-- Visionary 2 -->
             <div class="visionary-card">
                 <div class="image-wrapper">
@@ -146,14 +143,24 @@
                     <span class="role">Co-Founder</span>
                 </div>
             </div>
+            <!-- Visionary 3 -->
+            <div class="visionary-card">
+                <div class="image-wrapper">
+                    <img src="images/image.png" alt="Marshall Hamaanzi">
+                </div>
+                <div class="visionary-info">
+                    <h3>Marshall Hamaanzi</h3>
+                    <span class="role">Media Director</span>
+                </div>
+            </div>
         </div>
     </section>
+
     <section id="feedback" class="services" style="background: rgba(0,0,0,0.9);">
         <h2 class="section-title">Client Intelligence</h2>
         <p
             style="text-align: center; color: var(--accent-color); letter-spacing: 3px; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 50px;">
             Partner Feedback</p>
-
         <div class="services-grid">
             <!-- Feedback 1 -->
             <div class="feedback-card">
@@ -165,7 +172,6 @@
                     <span class="client-org">Mining Infrastructure Group</span>
                 </div>
             </div>
-
             <!-- Feedback 2 -->
             <div class="feedback-card">
                 <i class="fas fa-quote-left quote-icon"></i>
@@ -176,7 +182,6 @@
                     <span class="client-org">Environmental Solutions Ltd</span>
                 </div>
             </div>
-
             <!-- Feedback 3 -->
             <div class="feedback-card">
                 <i class="fas fa-quote-left quote-icon"></i>
@@ -200,13 +205,11 @@
             <div class="contact-info">
                 <h2>Get In Touch</h2>
                 <p>Partner with us to address complex environmental challenges with measurable impact.</p>
-
                 <div class="details">
-                    <p><strong>Email:</strong> info@busakaenviro.com</p>
+                    <p><strong>Email:</strong> busakaenviroworks@gmail.com</p>
                     <p><strong>Location:</strong> Copperbelt, Zambia</p>
                 </div>
-
-                <!-- Social Media Icons Section -->
+                <!-- Social Media Icons -->
                 <div class="social-links">
                     <a href="https://wa.me/yournumber" target="_blank" class="social-icon"><i
                             class="fab fa-whatsapp"></i></a>
@@ -219,12 +222,23 @@
                 </div>
             </div>
 
-            <form id="contact-form" action="https://formspree.io/f/your-id" method="POST" class="glass-form">
-                <div class="form-group"><input type="text" name="name" placeholder="Full Name" required></div>
-                <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
-                <div class="form-group"><textarea name="message" rows="4" placeholder="Your Inquiry"
-                        required></textarea></div>
-                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            <form id="contact-form" action="https://formspree.io/f/busakaenviroworks@gmail.com" method="POST"
+                class="glass-form">
+                <input type="hidden" name="_replyto" value="busakaenviroworks@gmail.com">
+                <input type="hidden" name="_subject" value="New Inquiry from Busaka Enviroworks Website">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone" placeholder="Phone Number (Optional)" autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Inquiry" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submit-btn">Submit Inquiry</button>
                 <p id="form-status"></p>
             </form>
         </div>

@@ -20,3 +20,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Contact form — async submission via Formspree
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+const submitBtn = document.getElementById('submit-btn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formStatus.textContent = '';
+        formStatus.className = '';
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                formStatus.textContent = 'Your inquiry has been sent. We will be in touch shortly.';
+                formStatus.style.color = '#c5a059';
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                const errorMsg = data.errors
+                    ? data.errors.map(err => err.message).join(', ')
+                    : 'Something went wrong. Please try again or email us directly.';
+                formStatus.textContent = errorMsg;
+                formStatus.style.color = '#e05c5c';
+            }
+        } catch {
+            formStatus.textContent = 'Unable to send message. Please email us at busakaenviroworks@gmail.com.';
+            formStatus.style.color = '#e05c5c';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Inquiry';
+        }
+    });
+}
